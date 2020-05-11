@@ -50,23 +50,23 @@ for ( var i = 0; i < twelveTime.length; i++){
 // save to local storage f
 $('.saveBtn').on("click", function()
     {
-    var valueID = $(this).data('eventID');
-    var tableText =$("#" + valueID).val();
+    var textID = $(this).attr('eventID');
+    var tableText =$("#" + textID).val();
 
-    plannerText.push({valueID,tableText});
+    plannerText.push({textID,tableText});
     localStorage.setItem("plannerText", JSON.stringify(plannerText));
     console.log(tableText)
 });
 
 function renderEvent (value){
-   if( value){
-    $("#"+value.valueID).text(value.tableText);
+   if(value){
+    $("#"+ value.textID).text(value.tableText);
    }
 }
 
 $(document).ready(function()
 {
-    plannerText = JSON.parse(localStorage.getItem("Data")) ;
+    plannerText = JSON.parse(localStorage.getItem("plannerText")) ;
     if (plannerText === null){
         plannerText = [];
     }
