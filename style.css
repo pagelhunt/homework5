@@ -1,0 +1,14 @@
+  
+  .hour {
+    background-color: #06AED5;
+    color: white;
+    border-top: 1px dashed #000000;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 10%;
+  }
+    
+  .textArea
+  {
+    width: 100%;
+  }
